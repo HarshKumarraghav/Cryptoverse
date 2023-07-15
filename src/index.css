@@ -51,7 +51,26 @@ input[type="number"] {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: -1;
+  z-index: -10;
+  background: radial-gradient(
+      circle at 85% 33%,
+      rgba(0, 255, 235, 0.085),
+      hsla(0, 0%, 100%, 0) 25%
+    ),
+    radial-gradient(
+      circle at 12% 55%,
+      rgba(108, 99, 255, 0.1),
+      hsla(0, 0%, 100%, 0) 25%
+    );
+}
+
+.main___background___gradientcolor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -10;
   background: radial-gradient(
       circle at 85% 33%,
       rgba(0, 255, 235, 0.085),
