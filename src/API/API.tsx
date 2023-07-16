@@ -5,8 +5,8 @@
  * which you want to view the cryptocurrency market. It is used to specify the vs_currency parameter in
  * the API request URL.
  */
-export const CryprtoApi = (currency: string, page: number) =>
-  `https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currency}&order=market_cap_desc&per_page=20&page=${page}&sparkline=false`;
+export const CryprtoApi = (currency: string) =>
+  `https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currency}&order=market_cap_desc&per_page=200&page=1&sparkline=false`;
 
 /**
  * The `CryptoByIdApi` function returns the API endpoint for retrieving information about a

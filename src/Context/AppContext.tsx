@@ -2,7 +2,6 @@ import { CryprtoApi, NewsApi, TopCryptosApi } from "@/API/API";
 import { createContext, useContext, useEffect, useState } from "react";
 export const AppContext = createContext<any>(null);
 export const AppProvider = ({ children }: any) => {
-  const [page, setPaage] = useState(1);
   const [topNewsCount, setTopNewsCount] = useState(9);
   const [currency, setCurrency] = useState("INR");
   const [currencySymbol, setCurrencySymbol] = useState("₹");
@@ -10,6 +9,7 @@ export const AppProvider = ({ children }: any) => {
   const [topCoins, setTopCoins] = useState([]);
   const [News, setNews] = useState([]);
   const [currencyData, setCurrencyData] = useState([]);
+
   const TopCrytosHandler = async () => {
     const response = await fetch(TopCryptosApi(currency));
     if (!response.ok) {
@@ -37,7 +37,7 @@ export const AppProvider = ({ children }: any) => {
     }
   };
   const CrytosHandler = async () => {
-    const response = await fetch(CryprtoApi(currency, page));
+    const response = await fetch(CryprtoApi(currency));
     if (!response.ok) {
       throw new Error("Something went wrong!");
     } else {
@@ -48,7 +48,7 @@ export const AppProvider = ({ children }: any) => {
   };
   useEffect(() => {
     CrytosHandler();
-  }, [currency, page]);
+  }, [currency]);
 
   useEffect(() => {
     TopNewsHandler();
@@ -59,7 +59,6 @@ export const AppProvider = ({ children }: any) => {
   return (
     <AppContext.Provider
       value={{
-        page,
         News,
         currency,
         topCoins,
@@ -68,7 +67,6 @@ export const AppProvider = ({ children }: any) => {
         topNewsCount,
         currencySymbol,
         setNews,
-        setPaage,
         setCurrency,
         setCurrencyId,
         setCurrencyData,
