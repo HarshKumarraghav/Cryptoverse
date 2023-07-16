@@ -1,5 +1,3 @@
-import exp from "constants";
-
 /**
  * The function returns the API endpoint for retrieving information about the top 100 cryptocurrencies
  * in a specific currency.

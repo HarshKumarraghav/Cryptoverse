@@ -2,21 +2,20 @@ import { CryprtoApi, NewsApi, TopCryptosApi } from "@/API/API";
 import { createContext, useContext, useEffect, useState } from "react";
 export const AppContext = createContext<any>(null);
 export const AppProvider = ({ children }: any) => {
-  const [count, setCount] = useState(100);
+  const [page, setPaage] = useState(1);
   const [topNewsCount, setTopNewsCount] = useState(9);
   const [currency, setCurrency] = useState("INR");
   const [currencySymbol, setCurrencySymbol] = useState("₹");
   const [currencyId, setCurrencyId] = useState(0);
   const [topCoins, setTopCoins] = useState([]);
   const [News, setNews] = useState([]);
+  const [currencyData, setCurrencyData] = useState([]);
   const TopCrytosHandler = async () => {
     const response = await fetch(TopCryptosApi(currency));
     if (!response.ok) {
       throw new Error("Something went wrong!");
     } else {
       const data = await response.json();
-      console.log(data);
-
       setTopCoins(data);
     }
   };
@@ -29,29 +28,27 @@ export const AppProvider = ({ children }: any) => {
         "x-rapidapi-host": import.meta.env.VITE_NEWS_RAPIDAPI_HOST,
       },
     };
-    console.log(RequestOption);
-
     const response = await fetch(NewsApi(topNewsCount), RequestOption);
     if (!response.ok) {
       throw new Error("Something went wrong!");
     } else {
       const data = await response.json();
       setNews(data.value);
-      console.log(data.value);
     }
   };
   const CrytosHandler = async () => {
-    const response = await fetch(CryprtoApi(currency, count));
+    const response = await fetch(CryprtoApi(currency, page));
     if (!response.ok) {
       throw new Error("Something went wrong!");
     } else {
       const data = await response.json();
       console.log(data);
+      setCurrencyData(data);
     }
   };
   useEffect(() => {
     CrytosHandler();
-  }, [count]);
+  }, [currency, page]);
 
   useEffect(() => {
     TopNewsHandler();
@@ -62,17 +59,19 @@ export const AppProvider = ({ children }: any) => {
   return (
     <AppContext.Provider
       value={{
+        page,
         News,
-        count,
         currency,
         topCoins,
         currencyId,
+        currencyData,
         topNewsCount,
         currencySymbol,
         setNews,
-        setCount,
+        setPaage,
         setCurrency,
         setCurrencyId,
+        setCurrencyData,
         setTopNewsCount,
         setCurrencySymbol,
       }}

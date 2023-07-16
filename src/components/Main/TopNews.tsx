@@ -15,6 +15,7 @@ const TopNewsSection = () => {
       {News?.map((newsItem: any) => (
         <Card
           className="flex flex-col justify-between"
+          key={newsItem?.url}
           onClick={() => window.open(newsItem.url, "_blank")}
         >
           <CardHeader className="w-full flex flex-row items-center">
