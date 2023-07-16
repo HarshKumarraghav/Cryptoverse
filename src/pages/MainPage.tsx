@@ -17,8 +17,10 @@ const MainPage = () => {
           The World
         </h2>
         <TopCryptos />
-        <div className="w-full flex justify-end">
-          <Button>Show More...</Button>
+        <div className="w-full flex justify-end ">
+          <Button className="hover__button__Black rounded-full">
+            Show More...
+          </Button>
         </div>
       </main>
       <section className="max-w-screen-xl mx-auto flex flex-col justify-center p-4 mt-40">
@@ -28,7 +30,9 @@ const MainPage = () => {
         </h1>
         <TopNewsSection />
         <div className="w-full mt-4 flex justify-end">
-          <Button>Show More...</Button>
+          <Button className="hover__button__Black rounded-full">
+            Show More...
+          </Button>
         </div>
       </section>
       <Footer />

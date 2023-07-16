@@ -32,7 +32,7 @@ const Header = () => {
             Home
           </motion.button>
           <motion.button
-            onClick={() => Router("/")}
+            onClick={() => Router("/Cryptrocurrencies")}
             className="py-2 px-4  text-sm text-primary focus:outline-none flex gap-x-2 items-center"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
