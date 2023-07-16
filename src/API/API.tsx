@@ -1,3 +1,5 @@
+import exp from "constants";
+
 /**
  * The function returns the API endpoint for retrieving information about the top 100 cryptocurrencies
  * in a specific currency.
@@ -40,3 +42,8 @@ export const TopCryptosApi = (currency: string) =>
  */
 export const ChartDataApi = (id: string, days = 365, currency: string) =>
   `https://api.coingecko.com/api/v3/coins/${id}/market_chart?vs_currency=${currency}&days=${days}`;
+
+export const NewsApi = (count: number) =>
+  `${
+    import.meta.env.VITE_NEWS_API_URL
+  }/news/search?q=cryptocurrency&safeSearch=Off&textFormat=Raw&freshness=Day&count=${count}`;

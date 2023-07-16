@@ -1,5 +1,3 @@
-import { useEffect, useState } from "react";
-import { TopCryptosApi } from "../../API/API";
 import { Card } from "@/components/ui/card";
 import { AddCommas } from "@/Utils/func";
 import { useApp } from "@/Context/AppContext";
