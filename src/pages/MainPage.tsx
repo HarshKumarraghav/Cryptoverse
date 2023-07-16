@@ -1,6 +1,6 @@
 import HeroBanner from "@/components/Main/HeroBanner";
 import Header from "@/components/Navbar/Header";
-import TopCryptos from "./TopCryptos";
+import TopCryptos from "../components/Main/TopCryptos";
 
 const MainPage = () => {
   return (
