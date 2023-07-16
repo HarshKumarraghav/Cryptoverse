@@ -4,8 +4,10 @@ import TopCryptos from "@/components/Main/TopCryptos";
 import TopNewsSection from "@/components/Main/TopNews";
 import { Button } from "@/components/ui/button";
 import Footer from "@/components/Footer/Footer";
+import { useNavigate } from "react-router";
 
 const MainPage = () => {
+  const Router = useNavigate();
   return (
     <div className="w-screen min-h-screen">
       <Header />
@@ -18,7 +20,10 @@ const MainPage = () => {
         </h2>
         <TopCryptos />
         <div className="w-full flex justify-end ">
-          <Button className="hover__button__Black rounded-full">
+          <Button
+            className="hover__button__Black rounded-full"
+            onClick={() => Router("/cryptocurrencies")}
+          >
             Show More...
           </Button>
         </div>
@@ -30,7 +35,10 @@ const MainPage = () => {
         </h1>
         <TopNewsSection />
         <div className="w-full mt-4 flex justify-end">
-          <Button className="hover__button__Black rounded-full">
+          <Button
+            className="hover__button__Black rounded-full"
+            onClick={() => Router("/news")}
+          >
             Show More...
           </Button>
         </div>
