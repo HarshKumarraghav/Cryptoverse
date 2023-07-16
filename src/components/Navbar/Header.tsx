@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { GiCrystalShine } from "react-icons/gi";
 import { HiOutlineLightBulb } from "react-icons/hi";
+import CurrencyFilter from "../Cryptocurrency/CurrencyFiller";
 const Header = () => {
   const Router = useNavigate();
   return (
@@ -47,6 +48,9 @@ const Header = () => {
           >
             <HiOutlineLightBulb size={20} /> News
           </motion.button>
+          <div className="bg-primary p-2 rounded-xl">
+            <CurrencyFilter />
+          </div>
         </div>
         <div className="md:hidden flex items-center space-x-2">
           <AiOutlineMenu size={30} />

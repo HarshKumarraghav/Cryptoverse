@@ -15,17 +15,15 @@ import {
 } from "@/components/ui/popover";
 import { useState } from "react";
 import { useApp } from "@/Context/AppContext";
-
-type Status = {
-  value: string;
-  label: string;
-};
+import { BsCurrencyExchange } from "react-icons/bs";
 const CurrencyFilter = () => {
   const [open, setOpen] = useState(false);
   const { currency, setCurrency, currencySymbol, setCurrencySymbol } = useApp();
   return (
-    <div className="flex items-center space-x-4">
-      <p className="text-sm text-muted-foreground">Currency:</p>
+    <div className="flex items-center space-x-1">
+      <p className="text-md text-white flex items-center">
+        <BsCurrencyExchange size={20} />
+      </p>
       <Popover open={open} onOpenChange={setOpen}>
         <PopoverTrigger asChild>
           <Button variant="outline" className="w-[100px] justify-center">
