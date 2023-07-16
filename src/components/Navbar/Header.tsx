@@ -5,7 +5,6 @@ import { useNavigate } from "react-router-dom";
 import { GiCrystalShine } from "react-icons/gi";
 import { HiOutlineLightBulb } from "react-icons/hi";
 import CurrencyFilter from "./CurrencyFilter";
-// import CurrencyFilter from "./CurrencyFilter";
 const Header = () => {
   const Router = useNavigate();
   return (
