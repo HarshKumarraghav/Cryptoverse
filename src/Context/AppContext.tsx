@@ -43,7 +43,6 @@ export const AppProvider = ({ children }: any) => {
       throw new Error("Something went wrong!");
     } else {
       const data = await response.json();
-      console.log(data);
       setCurrencyData(data);
     }
   };
@@ -61,8 +60,6 @@ export const AppProvider = ({ children }: any) => {
       throw new Error("Something went wrong!");
     } else {
       const data = await response.json();
-      console.log(data);
-
       setNews(data.value);
     }
   };

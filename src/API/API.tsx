@@ -15,7 +15,7 @@ export const CryprtoApi = (currency: string) =>
  * cryptocurrency. It is used to specify which cryptocurrency's information you want to retrieve from
  * the API.
  */
-export const CryptoByIdApi = (id: string) =>
+export const CryptoByIdApi = (id: string | undefined) =>
   `https://api.coingecko.com/api/v3/coins/${id}`;
 /**
  * The TrendingCryptoApi function returns the API endpoint for fetching trending cryptocurrencies based
