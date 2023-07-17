@@ -38,7 +38,11 @@ export const TopCryptosApi = (currency: string) =>
  * market data should be returned. It can be any valid currency code, such as "usd" for US dollars,
  * "eur" for euros, "gbp" for British pounds, etc.
  */
-export const ChartDataApi = (id: string, days = 365, currency: string) =>
+export const ChartDataApi = (
+  id: string | undefined,
+  days = 365,
+  currency: string
+) =>
   `https://api.coingecko.com/api/v3/coins/${id}/market_chart?vs_currency=${currency}&days=${days}`;
 
 export const TopNewsApi = () =>
