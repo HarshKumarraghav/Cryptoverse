@@ -35,10 +35,6 @@
 - 📱 **Mobile Compatibility:** Access Cryptoverse on the go with a mobile-friendly design for convenience and flexibility.
 - 💡**Educational Resources:** Access educational materials and resources to enhance your understanding of cryptocurrencies and blockchain technology.
 
-## 🛠️ Design Architecture
-
-![Cryptoverse](public/assets/cryptoverse_arc.png)
-
 ---
 
 ## 🛠️ Tech Stack Used in Cryptoverse:
