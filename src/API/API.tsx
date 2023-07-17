@@ -41,7 +41,11 @@ export const TopCryptosApi = (currency: string) =>
 export const ChartDataApi = (id: string, days = 365, currency: string) =>
   `https://api.coingecko.com/api/v3/coins/${id}/market_chart?vs_currency=${currency}&days=${days}`;
 
-export const NewsApi = (count: number) =>
+export const TopNewsApi = () =>
   `${
     import.meta.env.VITE_NEWS_API_URL
-  }/news/search?q=cryptocurrency&safeSearch=Off&textFormat=Raw&freshness=Day&count=${count}`;
+  }/news/search?q=cryptocurrency&safeSearch=Off&textFormat=Raw&freshness=Day&count=9`;
+export const NewsApi = () =>
+  `${
+    import.meta.env.VITE_NEWS_API_URL
+  }/news/search?q=cryptocurrency&safeSearch=Off&textFormat=Raw&freshness=Day&count=100`;

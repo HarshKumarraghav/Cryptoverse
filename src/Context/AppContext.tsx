@@ -1,4 +1,4 @@
-import { CryprtoApi, NewsApi, TopCryptosApi } from "@/API/API";
+import { CryprtoApi, NewsApi, TopCryptosApi, TopNewsApi } from "@/API/API";
 import { createContext, useContext, useEffect, useState } from "react";
 export const AppContext = createContext<any>(null);
 export const AppProvider = ({ children }: any) => {
@@ -7,7 +7,7 @@ export const AppProvider = ({ children }: any) => {
   const [currencySymbol, setCurrencySymbol] = useState("₹");
   const [currencyId, setCurrencyId] = useState(0);
   const [topCoins, setTopCoins] = useState([]);
-  const [News, setNews] = useState([]);
+  const [topNews, setTopNews] = useState([]);
   const [currencyData, setCurrencyData] = useState([]);
 
   const TopCrytosHandler = async () => {
@@ -28,12 +28,12 @@ export const AppProvider = ({ children }: any) => {
         "x-rapidapi-host": import.meta.env.VITE_NEWS_RAPIDAPI_HOST,
       },
     };
-    const response = await fetch(NewsApi(topNewsCount), RequestOption);
+    const response = await fetch(TopNewsApi(), RequestOption);
     if (!response.ok) {
       throw new Error("Something went wrong!");
     } else {
       const data = await response.json();
-      setNews(data.value);
+      setTopNews(data.value);
     }
   };
   const CrytosHandler = async () => {
@@ -46,27 +46,38 @@ export const AppProvider = ({ children }: any) => {
       setCurrencyData(data);
     }
   };
+  const NewsHandler = async () => {
+    const response = await fetch(NewsApi());
+    if (!response.ok) {
+      throw new Error("Something went wrong!");
+    } else {
+      const data = await response.json();
+      setTopCoins(data);
+    }
+  };
   useEffect(() => {
     CrytosHandler();
   }, [currency]);
 
   useEffect(() => {
     TopNewsHandler();
+    NewsHandler();
   }, []);
   useEffect(() => {
     TopCrytosHandler();
   }, [currency]);
+
   return (
     <AppContext.Provider
       value={{
-        News,
+        topNews,
         currency,
         topCoins,
         currencyId,
         currencyData,
         topNewsCount,
         currencySymbol,
-        setNews,
+        setTopNews,
         setCurrency,
         setCurrencyId,
         setCurrencyData,
