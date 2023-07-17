@@ -10,11 +10,11 @@
 
 ## ⚛️ Why a Cryptoverse
 
-# ⚛️ Comprehensive Information:
+### ⚛️ Comprehensive Information:
 
 **Cryptoverse** stands out as a reliable and comprehensive source of information for cryptocurrencies. With details on over 200 cryptocurrencies and 50 country currencies, users can access a wide range of data to make informed decisions. Having all the relevant information in one place saves users time and effort in searching multiple platforms for the data they need.
 
-# ⚛️User-Friendly Interface:
+### ⚛️User-Friendly Interface:
 
 **Cryptoverse** prioritizes user experience with its intuitive and user-friendly interface. Navigating through the application is seamless, allowing users to access the desired information quickly. The clean design and logical layout make it accessible for users of all levels of expertise, including both beginners and experienced investors.
 
