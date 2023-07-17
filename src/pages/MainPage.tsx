@@ -5,11 +5,12 @@ import TopNewsSection from "@/components/Main/TopNews";
 import { Button } from "@/components/ui/button";
 import Footer from "@/components/Footer/Footer";
 import { useNavigate } from "react-router";
+import { GoToTop } from "@/Utils/GoToTop";
 
 const MainPage = () => {
   const Router = useNavigate();
   return (
-    <div className="w-screen min-h-screen">
+    <div className="w-screen min-h-screen relative">
       <Header />
       <HeroBanner />
 
@@ -21,7 +22,7 @@ const MainPage = () => {
         <TopCryptos />
         <div className="w-full flex justify-end ">
           <Button
-            className="hover__button__Black rounded-full"
+            className="hover__button__Black rounded-full mt-4"
             onClick={() => Router("/cryptocurrencies")}
           >
             Show More...
@@ -30,7 +31,8 @@ const MainPage = () => {
       </main>
       <section className="max-w-screen-xl mx-auto flex flex-col justify-center p-4 mt-40">
         <h1 className="font-bold font-sans my-10 text-3xl md:text-4xl">
-          Latest <span className="gradient___text___color italic">Cryptos</span>{" "}
+          Latest{" "}
+          <span className="gradient___text___color italic">Cryptocurrency</span>{" "}
           News
         </h1>
         <TopNewsSection />
@@ -44,6 +46,7 @@ const MainPage = () => {
         </div>
       </section>
       <Footer />
+      <GoToTop />
     </div>
   );
 };

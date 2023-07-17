@@ -48,4 +48,4 @@ export const TopNewsApi = () =>
 export const NewsApi = () =>
   `${
     import.meta.env.VITE_NEWS_API_URL
-  }/news/search?q=cryptocurrency&safeSearch=Off&textFormat=Raw&freshness=Day&count=100`;
+  }/news/search?q=cryptocurrency&safeSearch=Off&textFormat=Raw&freshness=Day&count=1000`;

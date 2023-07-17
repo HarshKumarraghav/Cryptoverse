@@ -8,6 +8,7 @@ export const AppProvider = ({ children }: any) => {
   const [currencyId, setCurrencyId] = useState(0);
   const [topCoins, setTopCoins] = useState([]);
   const [topNews, setTopNews] = useState([]);
+  const [news, setNews] = useState([]);
   const [currencyData, setCurrencyData] = useState([]);
 
   const TopCrytosHandler = async () => {
@@ -47,29 +48,39 @@ export const AppProvider = ({ children }: any) => {
     }
   };
   const NewsHandler = async () => {
-    const response = await fetch(NewsApi());
+    const RequestOption = {
+      method: "GET",
+      headers: {
+        "x-bingapis-sdk": "true",
+        "x-rapidapi-key": import.meta.env.VITE_RAPIDAPI_KEY,
+        "x-rapidapi-host": import.meta.env.VITE_NEWS_RAPIDAPI_HOST,
+      },
+    };
+    const response = await fetch(NewsApi(), RequestOption);
     if (!response.ok) {
       throw new Error("Something went wrong!");
     } else {
       const data = await response.json();
-      setTopCoins(data);
+      console.log(data);
+
+      setNews(data.value);
     }
   };
   useEffect(() => {
-    CrytosHandler();
-  }, [currency]);
-
-  useEffect(() => {
     TopNewsHandler();
+  }, []);
+  useEffect(() => {
     NewsHandler();
   }, []);
   useEffect(() => {
+    CrytosHandler();
     TopCrytosHandler();
   }, [currency]);
 
   return (
     <AppContext.Provider
       value={{
+        news,
         topNews,
         currency,
         topCoins,
@@ -77,6 +88,7 @@ export const AppProvider = ({ children }: any) => {
         currencyData,
         topNewsCount,
         currencySymbol,
+        setNews,
         setTopNews,
         setCurrency,
         setCurrencyId,
