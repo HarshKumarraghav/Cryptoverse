@@ -24,16 +24,16 @@
 
 ## ✨ Features
 
-- 📚 Extensive Cryptocurrency Database: Explore over 200 cryptocurrencies and gain valuable insights into their profiles and metrics.
-- 💱 Currency Converter: Seamlessly convert between 50 different country currencies for easy analysis and decision-making.
-- 📊 Interactive Charts: Visualize historical price movements and identify trends and trading opportunities.
-- 📰 Cryptocurrency News: Stay updated with breaking news, market updates, and regulatory developments in the crypto world.
-- 📈 Portfolio Tracking: Monitor your cryptocurrency investments in real-time, track profits and losses, and set custom alerts.
-- 🤖 Personalized Recommendations: Discover new cryptocurrencies, news articles, and investment opportunities tailored to your interests.
-- 🌍 User-Friendly Interface: Enjoy a clean and intuitive interface designed for both beginners and experienced users.
-- 🔒 Trust and Reliability: Access accurate data sourced from reputable and verified sources, building trust in your decision-making.
-- 📱 Mobile Compatibility: Access Cryptoverse on the go with a mobile-friendly design for convenience and flexibility.
-- 💡 Educational Resources: Access educational materials and resources to enhance your understanding of cryptocurrencies and blockchain technology.
+- 📚 **Extensive Cryptocurrency Database:** Explore over 200 cryptocurrencies and gain valuable insights into their profiles and metrics.
+- 💱 **Currency Converter:** Seamlessly convert between 50 different country currencies for easy analysis and decision-making.
+- 📊 **Interactive Charts:** Visualize historical price movements and identify trends and trading opportunities.
+- 📰 **Cryptocurrency News:** Stay updated with breaking news, market updates, and regulatory developments in the crypto world.
+- 📈 **Portfolio Tracking:** Monitor your cryptocurrency investments in real-time, track profits and losses, and set custom alerts.
+- 🤖 **Personalized Recommendations:** Discover new cryptocurrencies, news articles, and investment opportunities tailored to your interests.
+- 🌍 **User-Friendly Interface:** Enjoy a clean and intuitive interface designed for both beginners and experienced users.
+- 🔒 **Trust and Reliability:** Access accurate data sourced from reputable and verified sources, building trust in your decision-making.
+- 📱 **Mobile Compatibility:** Access Cryptoverse on the go with a mobile-friendly design for convenience and flexibility.
+- 💡**Educational Resources:** Access educational materials and resources to enhance your understanding of cryptocurrencies and blockchain technology.
 
 ## 🛠️ Design Architecture
 
