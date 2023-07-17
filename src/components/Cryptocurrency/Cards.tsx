@@ -6,13 +6,18 @@ import {
   CardHeader,
   CardTitle,
 } from "../ui/card";
+import { useNavigate } from "react-router-dom";
 
 const Cards = ({ currency }: any) => {
+  const Router = useNavigate();
   const { currencySymbol } = useApp();
   return (
     <Card
       className="bg-white p-2 md:p-4 rounded-lg shadow-lg"
       key={currency?.id}
+      onClick={() => {
+        Router(`/coindetail/${currency.id}`);
+      }}
     >
       <CardHeader className="flex flex-row w-full justify-between items-center border-b-2">
         <CardTitle className="text-lg">

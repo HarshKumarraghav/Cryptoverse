@@ -1,12 +1,20 @@
 import { Card } from "@/components/ui/card";
 import { AddCommas } from "@/Utils/func";
 import { useApp } from "@/Context/AppContext";
+import { useNavigate } from "react-router-dom";
 const TopCryptos = () => {
   const { topCoins, currencySymbol } = useApp();
+  const Router = useNavigate();
   return (
     <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
       {topCoins?.map((coin: any) => (
-        <Card className="bg-white shadow-md rounded-md p-4" key={coin.id}>
+        <Card
+          className="bg-white shadow-md rounded-md p-4"
+          key={coin.id}
+          onClick={() => {
+            Router(`/coindetail/${coin.id}`);
+          }}
+        >
           <div className="flex justify-between items-center">
             <div className="flex items-center">
               <img

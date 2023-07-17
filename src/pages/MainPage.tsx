@@ -6,9 +6,13 @@ import { Button } from "@/components/ui/button";
 import Footer from "@/components/Footer/Footer";
 import { useNavigate } from "react-router";
 import { GoToTop } from "@/Utils/GoToTop";
+import { useEffect } from "react";
 
 const MainPage = () => {
   const Router = useNavigate();
+  useEffect(() => {
+    document.title = "Cryptocurrency | Home";
+  }, []);
   return (
     <div className="w-screen min-h-screen relative">
       <Header />
