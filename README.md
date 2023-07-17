@@ -8,7 +8,7 @@
 
 ![Cryptoverse](public/assets/cryptoverse-poster.png)
 
-## Why a Cryptoverse
+## Why Cryptoverse?
 
 ### Comprehensive Information:
 
@@ -38,6 +38,16 @@
 ## 🛠️ Design Architecture
 
 ![Cryptoverse](public/assets/cryptoverse_arc.png)
+
+---
+
+## 🛠️ Tech Stack Used in Cryptoverse:
+
+- **React.js:** A popular JavaScript library for building user interfaces, providing a fast and responsive application.
+- **Tailwind CSS:** A utility-first CSS framework that enables rapid development with customizable and reusable UI components.
+- **CoinGecko API:** Integrated to fetch cryptocurrency data, including details, market cap, and historical information.
+- **Bing News API:** Utilized to gather the latest cryptocurrency news and provide up-to-date information to users.
+- **Shcadcn UI:** A design system used for creating a consistent and visually appealing user interface throughout the application.
 
 ---
 
