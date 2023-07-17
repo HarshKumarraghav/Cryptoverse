@@ -40,7 +40,7 @@ const MainBanner = () => {
           onChange={(e) => setSearch(e.target.value)}
           type="text"
           placeholder="Search cryptos..."
-          className="h-14 rounded-full hover__button__Black"
+          className="h-14 rounded-full hover__button__Black border__"
         />
       </div>
       <div className="w-full mt-5">

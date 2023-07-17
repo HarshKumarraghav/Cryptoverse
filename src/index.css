@@ -63,7 +63,9 @@ input[type="number"] {
       hsla(0, 0%, 100%, 0) 25%
     );
 }
-
+.border__ {
+  border: 0 0 0 7px #0f172a29;
+}
 .hover__button:hover {
   transition: all 0.2s ease-in-out;
   box-shadow: 0 0 0 7px #0f172a29;
