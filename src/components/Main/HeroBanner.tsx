@@ -7,9 +7,9 @@ type StatCardProps = {
 
 const StatCard = ({ title, value }: StatCardProps) => {
   return (
-    <div className="bg-white p-2 md:p-4 rounded-lg shadow-lg">
-      <h2 className="text-lg font-bold text-primary mb-2">{title}</h2>
-      <p className="text-2xl font-semibold">{value}</p>
+    <div className="bg-white p-2 md:p-4 rounded-lg shadow-lg text-center">
+      <h2 className="text-sm font-bold text-primary mb-2">{title}</h2>
+      <p className="text-lg md:text-2xl font-semibold">{value}</p>
     </div>
   );
 };
@@ -22,7 +22,6 @@ const HeroBanner = () => {
     { title: "Total 24h Volume", value: "$36B" },
     { title: "Total Markets", value: "36.5K" },
   ];
-
   return (
     <motion.div
       className="max-w-screen-xl mx-auto div__height flex flex-col-reverse lg:flex-row items-center justify-center p-2 lg:p-4 font-main"
@@ -60,7 +59,7 @@ const HeroBanner = () => {
         </div>
       </motion.div>
       <motion.div
-        className="w-full h-1/2 lg:w-1/2 lg:h-full "
+        className="w-full lg:w-1/2 lg:h-full "
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6 }}
